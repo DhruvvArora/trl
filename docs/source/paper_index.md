@@ -455,13 +455,8 @@ training_args = GRPOConfig(
 
 **📜 Paper**: https://huggingface.co/papers/2510.00977
 
-Shows that GRPO's effectiveness stems from an implicit contrastive objective rather than
-accurate advantage estimation via large group sizes. This establishes a formal connection
-between GRPO and DPO, where group size only affects Monte Carlo estimators of the
-contrastive objective. The authors introduce 2-GRPO — using just two rollouts — which
-matches the performance of 16-GRPO at significantly lower training cost. Used in TRL via
-[`GRPOTrainer`] with `num_generations=2`. To reproduce the paper's setting, use this
-configuration:
+Shows that GRPO's effectiveness stems from an implicit contrastive objective rather than accurate advantage estimation via large group sizes. This establishes a formal connection between GRPO and DPO, where group size only affects Monte Carlo estimators of the contrastive objective. The authors introduce 2-GRPO — using just two rollouts — which matches the performance of 16-GRPO at significantly lower training cost. Used in TRL via [`GRPOTrainer`] with `num_generations=2`. To reproduce the paper's setting, use this configuration:
+
 ```python
 from trl import GRPOConfig, GRPOTrainer
 
